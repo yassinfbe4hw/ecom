@@ -361,6 +361,46 @@ export const INITIAL_PRODUCTS: Product[] = [
       { label: 'Compatibility', value: 'iPhone 15 / 16 Series & Galaxy S24' },
       { label: 'Material', value: 'Flax straw & PBAT biopolymer' }
     ]
+  },
+  {
+    id: 'p-13',
+    name: 'Y68 Big Screen Smart Bracelet',
+    price: 29,
+    originalPrice: 45,
+    rating: 4.9,
+    reviewsCount: 184,
+    category: 'Tech & Accessories',
+    image: 'https://images.unsplash.com/photo-1579586337278-3befd40fd17a?auto=format&fit=crop&q=80&w=800',
+    gallery: [
+      'https://images.unsplash.com/photo-1579586337278-3befd40fd17a?auto=format&fit=crop&q=80&w=800',
+      'https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&q=80&w=800'
+    ],
+    description: 'The Y68 Smart Watch & Health Bracelet features a large HD touchscreen display, 24/7 real-time heart rate & blood pressure health monitoring, SPO2 oxygen tracking, multi-sport aerobic fitness tracking, and convenient direct-plug USB quick charging.',
+    features: [
+      '1.44" HD Big Screen Color Touch Display',
+      '24/7 Heart Rate, Blood Pressure & SPO2 Oxygen Monitor',
+      'Multi-Sport Aerobic Fitness & Step Activity Tracker',
+      'Direct USB Quick Charge (No extra cables required)',
+      'IP67 Water & Dust Resistance with Smart Phone Notifications'
+    ],
+    stock: 45,
+    ecoRating: 5,
+    badge: 'New Arrival',
+    sustainabilityTag: 'Energy Efficient & Low Footprint',
+    variants: {
+      colors: [
+        { name: 'Onyx Black', hex: '#111111' },
+        { name: 'Silver White', hex: '#e2e8f0' },
+        { name: 'Rose Pink', hex: '#f472b6' }
+      ]
+    },
+    specs: [
+      { label: 'Screen', value: '1.44" High Definition Color Screen' },
+      { label: 'Charging', value: 'Direct USB Quick-Plug Charge' },
+      { label: 'Sensors', value: 'Heart Rate, Blood Pressure, SPO2, Motion' },
+      { label: 'Battery Life', value: '7-10 Days Standby / 3-5 Days Active' },
+      { label: 'Water Rating', value: 'IP67 Waterproof' }
+    ]
   }
 ];
 

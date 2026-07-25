@@ -100,19 +100,19 @@ export const AiShoppingAssistant: React.FC<AiShoppingAssistantProps> = ({
       <div className="relative w-full max-w-2xl bg-stone-900 border border-stone-800 rounded-3xl shadow-2xl overflow-hidden flex flex-col h-[80vh] max-h-[700px]">
         
         {/* Header */}
-        <div className="p-4 sm:p-5 bg-gradient-to-r from-emerald-950 via-stone-900 to-teal-950 border-b border-stone-800 flex items-center justify-between">
+        <div className="p-4 sm:p-5 bg-gradient-to-r from-orange-950 via-stone-900 to-amber-950 border-b border-stone-800 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center text-stone-950 shadow-md">
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-orange-500 to-amber-600 flex items-center justify-center text-stone-950 shadow-md">
               <Sparkles className="w-5 h-5 text-stone-950" />
             </div>
             <div>
               <h3 className="font-bold text-stone-100 text-base flex items-center gap-2">
-                Lumina AI Shopping Concierge
-                <span className="text-[10px] bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 px-2 py-0.5 rounded-full uppercase tracking-wider font-extrabold">
+                Lumina SHOPYVIA AI Concierge
+                <span className="text-[10px] bg-orange-500/20 text-orange-300 border border-orange-500/40 px-2 py-0.5 rounded-full uppercase tracking-wider font-extrabold">
                   Gemini Powered
                 </span>
               </h3>
-              <p className="text-xs text-stone-400">Ask for eco recommendations, gift guides, or product advice</p>
+              <p className="text-xs text-stone-400">Ask for recommendations, smart tech advice, or gift guides</p>
             </div>
           </div>
 
@@ -134,7 +134,7 @@ export const AiShoppingAssistant: React.FC<AiShoppingAssistantProps> = ({
               <div
                 className={`max-w-[85%] p-4 rounded-2xl text-xs sm:text-sm leading-relaxed ${
                   msg.role === 'user'
-                    ? 'bg-emerald-600 text-white rounded-br-none shadow-md'
+                    ? 'bg-orange-500 text-stone-950 font-medium rounded-br-none shadow-md'
                     : 'bg-stone-850 text-stone-200 border border-stone-800 rounded-bl-none'
                 }`}
               >
@@ -163,10 +163,10 @@ export const AiShoppingAssistant: React.FC<AiShoppingAssistantProps> = ({
                           referrerPolicy="no-referrer"
                         />
                         <div className="flex-1 min-w-0">
-                          <h4 className="text-xs font-semibold text-stone-100 truncate group-hover:text-emerald-300">
+                          <h4 className="text-xs font-semibold text-stone-100 truncate group-hover:text-orange-300">
                             {prod.name}
                           </h4>
-                          <span className="text-xs font-extrabold text-emerald-400 block mt-0.5">
+                          <span className="text-xs font-extrabold text-orange-400 block mt-0.5">
                             ${prod.price}
                           </span>
                         </div>
@@ -175,7 +175,7 @@ export const AiShoppingAssistant: React.FC<AiShoppingAssistantProps> = ({
                             e.stopPropagation();
                             onAddToCart(prod);
                           }}
-                          className="p-2 bg-emerald-500 hover:bg-emerald-400 text-stone-950 rounded-lg text-xs font-bold"
+                          className="p-2 bg-orange-500 hover:bg-orange-400 text-stone-950 rounded-lg text-xs font-bold"
                           title="Add to cart"
                         >
                           <ShoppingBag className="w-3.5 h-3.5" />
@@ -190,8 +190,8 @@ export const AiShoppingAssistant: React.FC<AiShoppingAssistantProps> = ({
 
           {isLoading && (
             <div className="flex items-center gap-2 text-xs text-stone-400 p-3 bg-stone-850 rounded-xl max-w-xs border border-stone-800">
-              <Bot className="w-4 h-4 text-emerald-400 animate-spin" />
-              Lumina is crafting your custom eco selection...
+              <Bot className="w-4 h-4 text-orange-400 animate-spin" />
+              Lumina is crafting your custom SHOPYVIA selection...
             </div>
           )}
         </div>
@@ -204,7 +204,7 @@ export const AiShoppingAssistant: React.FC<AiShoppingAssistantProps> = ({
               onClick={() => handleSendMessage(prompt)}
               className="px-3 py-1.5 bg-stone-800 hover:bg-stone-750 text-stone-300 hover:text-stone-100 text-[11px] font-medium rounded-lg whitespace-nowrap border border-stone-700/60 transition-colors flex items-center gap-1.5"
             >
-              <Leaf className="w-3 h-3 text-emerald-400" />
+              <Leaf className="w-3 h-3 text-orange-400" />
               {prompt}
             </button>
           ))}
@@ -224,12 +224,12 @@ export const AiShoppingAssistant: React.FC<AiShoppingAssistantProps> = ({
               placeholder="Ask Lumina anything about products or gift ideas..."
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              className="flex-1 bg-stone-800 text-stone-100 text-xs sm:text-sm px-4 py-3 rounded-xl border border-stone-700 focus:outline-none focus:border-emerald-500"
+              className="flex-1 bg-stone-800 text-stone-100 text-xs sm:text-sm px-4 py-3 rounded-xl border border-stone-700 focus:outline-none focus:border-orange-500"
             />
             <button
               type="submit"
               disabled={isLoading || !input.trim()}
-              className="px-5 py-3 bg-emerald-500 hover:bg-emerald-400 disabled:opacity-50 text-stone-950 font-bold text-xs rounded-xl transition-all shadow-md flex items-center gap-1.5"
+              className="px-5 py-3 bg-orange-500 hover:bg-orange-400 disabled:opacity-50 text-stone-950 font-extrabold text-xs rounded-xl transition-all shadow-md flex items-center gap-1.5"
             >
               <span>Ask</span>
               <Send className="w-3.5 h-3.5" />

@@ -182,7 +182,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                       placeholder="Promo Code (ECO10)"
                       value={promoInput}
                       onChange={(e) => setPromoInput(e.target.value)}
-                      className="w-full bg-stone-800 text-stone-100 text-xs pl-8 pr-3 py-2 rounded-xl border border-stone-700 focus:outline-none focus:border-emerald-500 uppercase"
+                      className="w-full bg-stone-800 text-stone-100 text-xs pl-8 pr-3 py-2 rounded-xl border border-stone-700 focus:outline-none focus:border-orange-500 uppercase"
                     />
                   </div>
                   <button
@@ -194,7 +194,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                 </div>
 
                 {appliedPromoCode && (
-                  <div className="flex items-center justify-between text-xs text-emerald-400 font-medium bg-emerald-950/60 p-2 rounded-lg border border-emerald-800">
+                  <div className="flex items-center justify-between text-xs text-orange-400 font-medium bg-orange-950/60 p-2 rounded-lg border border-orange-800">
                     <span>Applied: <strong>{appliedPromoCode}</strong> ({promoInfo?.description})</span>
                     <button type="button" onClick={() => onApplyPromoCode('')} className="text-stone-400 hover:text-white">
                       <X className="w-3.5 h-3.5" />
@@ -215,7 +215,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                 </div>
 
                 {discountAmount > 0 && (
-                  <div className="flex justify-between text-emerald-400 font-semibold">
+                  <div className="flex justify-between text-orange-400 font-semibold">
                     <span>Discount ({promoInfo?.discountPercent}%)</span>
                     <span>-${discountAmount.toFixed(2)}</span>
                   </div>
@@ -224,20 +224,20 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                 <div className="flex justify-between">
                   <span className="text-stone-400">Carbon-Neutral Shipping</span>
                   <span className="font-semibold text-stone-200">
-                    {shippingCost === 0 ? <strong className="text-emerald-400 uppercase text-[10px]">FREE</strong> : `$${shippingCost.toFixed(2)}`}
+                    {shippingCost === 0 ? <strong className="text-orange-400 uppercase text-[10px]">FREE</strong> : `$${shippingCost.toFixed(2)}`}
                   </span>
                 </div>
 
                 <div className="flex justify-between text-sm font-extrabold text-stone-100 pt-2 border-t border-stone-800">
                   <span>Estimated Total</span>
-                  <span className="text-emerald-400 text-base">${grandTotal.toFixed(2)}</span>
+                  <span className="text-orange-400 text-base">${grandTotal.toFixed(2)}</span>
                 </div>
               </div>
 
               {/* Checkout Button */}
               <button
                 onClick={onProceedToCheckout}
-                className="w-full py-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-stone-950 font-extrabold text-sm shadow-lg shadow-emerald-900/40 flex items-center justify-center gap-2 transition-all hover:scale-[1.01] active:scale-[0.99]"
+                className="w-full py-3.5 rounded-xl bg-orange-500 hover:bg-orange-400 text-stone-950 font-extrabold text-sm shadow-lg shadow-orange-950/40 flex items-center justify-center gap-2 transition-all hover:scale-[1.01] active:scale-[0.99]"
               >
                 Proceed to Checkout
                 <ArrowRight className="w-4 h-4" />

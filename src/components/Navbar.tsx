@@ -52,15 +52,15 @@ export const Navbar: React.FC<NavbarProps> = ({
   return (
     <header className="sticky top-0 z-40 bg-stone-900/95 backdrop-blur-md text-stone-100 border-b border-stone-800 transition-all">
       {/* Top Banner */}
-      <div className="bg-emerald-900/80 text-emerald-100 px-4 py-1.5 text-xs text-center font-medium flex items-center justify-center gap-3 border-b border-emerald-800/50">
+      <div className="bg-orange-950/80 text-orange-100 px-4 py-1.5 text-xs text-center font-medium flex items-center justify-center gap-3 border-b border-orange-800/50">
         <span className="inline-flex items-center gap-1.5">
-          <Leaf className="w-3.5 h-3.5 text-emerald-400 animate-pulse" />
+          <Leaf className="w-3.5 h-3.5 text-orange-400 animate-pulse" />
           100% Carbon Neutral Shipping on all orders
         </span>
-        <span className="hidden sm:inline text-emerald-400">•</span>
+        <span className="hidden sm:inline text-orange-400">•</span>
         <span className="hidden sm:inline-flex items-center gap-1">
           <Percent className="w-3.5 h-3.5" />
-          Use code <strong className="text-white underline decoration-emerald-400">ECO10</strong> for 10% off
+          Use code <strong className="text-white underline decoration-orange-400">ECO10</strong> for 10% off
         </span>
       </div>
 
@@ -82,15 +82,15 @@ export const Navbar: React.FC<NavbarProps> = ({
               onClick={() => onSelectCategory('All')} 
               className="flex items-center gap-2 group text-left focus:outline-none"
             >
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-700 flex items-center justify-center text-white shadow-lg shadow-emerald-950/50 group-hover:scale-105 transition-transform">
-                <Leaf className="w-5 h-5 text-emerald-100" />
+              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-orange-500 to-amber-600 flex items-center justify-center text-stone-950 shadow-lg shadow-orange-950/50 group-hover:scale-105 transition-transform font-black">
+                <Leaf className="w-5 h-5 text-stone-950" />
               </div>
               <div>
-                <span className="text-xl font-bold tracking-tight bg-gradient-to-r from-stone-100 via-stone-200 to-emerald-400 bg-clip-text text-transparent">
-                  EcoBoutique
+                <span className="text-xl font-extrabold tracking-tight bg-gradient-to-r from-stone-100 via-stone-200 to-orange-400 bg-clip-text text-transparent uppercase">
+                  SHOPYVIA
                 </span>
                 <span className="block text-[10px] text-stone-400 tracking-wider uppercase -mt-1 font-semibold">
-                  Sustainable Goods
+                  Smart & Sustainable Goods
                 </span>
               </div>
             </button>
@@ -104,8 +104,8 @@ export const Navbar: React.FC<NavbarProps> = ({
                 type="text"
                 value={searchQuery}
                 onChange={(e) => onSearchChange(e.target.value)}
-                placeholder="Search organic linen, solar gear, bamboo..."
-                className="w-full bg-stone-800/90 text-stone-100 text-sm pl-10 pr-4 py-2 rounded-xl border border-stone-700/80 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-all placeholder:text-stone-500"
+                placeholder="Search smart watches, organic linen, solar gear..."
+                className="w-full bg-stone-800/90 text-stone-100 text-sm pl-10 pr-4 py-2 rounded-xl border border-stone-700/80 focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500 transition-all placeholder:text-stone-500"
               />
               {searchQuery && (
                 <button
@@ -123,9 +123,9 @@ export const Navbar: React.FC<NavbarProps> = ({
             {/* AI Concierge Button */}
             <button
               onClick={onOpenAiAssistant}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-gradient-to-r from-emerald-600/90 to-teal-600/90 hover:from-emerald-500 hover:to-teal-500 text-white text-xs sm:text-sm font-medium shadow-md shadow-emerald-950/40 border border-emerald-400/30 transition-all hover:scale-[1.02] active:scale-[0.98]"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-400 hover:to-amber-500 text-stone-950 text-xs sm:text-sm font-bold shadow-md shadow-orange-950/40 border border-orange-400/30 transition-all hover:scale-[1.02] active:scale-[0.98]"
             >
-              <Sparkles className="w-4 h-4 text-amber-300 animate-spin" style={{ animationDuration: '4s' }} />
+              <Sparkles className="w-4 h-4 text-stone-950 animate-spin" style={{ animationDuration: '4s' }} />
               <span className="hidden sm:inline">Ask</span> AI Concierge
             </button>
 
@@ -135,11 +135,11 @@ export const Navbar: React.FC<NavbarProps> = ({
               title="Toggle Eco Hero Filter"
               className={`hidden lg:flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl text-xs font-medium border transition-all ${
                 ecoFilter 
-                  ? 'bg-emerald-500/20 text-emerald-300 border-emerald-500/50' 
+                  ? 'bg-orange-500/20 text-orange-300 border-orange-500/50' 
                   : 'bg-stone-800 text-stone-400 border-stone-700 hover:text-stone-200'
               }`}
             >
-              <Leaf className={`w-3.5 h-3.5 ${ecoFilter ? 'text-emerald-400 fill-emerald-400' : ''}`} />
+              <Leaf className={`w-3.5 h-3.5 ${ecoFilter ? 'text-orange-400 fill-orange-400' : ''}`} />
               Eco Hero
             </button>
 
@@ -172,9 +172,9 @@ export const Navbar: React.FC<NavbarProps> = ({
               className="flex items-center gap-2 pl-3 pr-3.5 py-1.5 bg-stone-800 hover:bg-stone-750 text-stone-100 rounded-xl border border-stone-700 transition-all hover:border-stone-600"
             >
               <div className="relative">
-                <ShoppingBag className="w-5 h-5 text-emerald-400" />
+                <ShoppingBag className="w-5 h-5 text-orange-400" />
                 {totalCartCount > 0 && (
-                  <span className="absolute -top-2 -right-2 bg-emerald-500 text-stone-950 text-[10px] font-extrabold w-4 h-4 rounded-full flex items-center justify-center shadow">
+                  <span className="absolute -top-2 -right-2 bg-orange-500 text-stone-950 text-[10px] font-extrabold w-4 h-4 rounded-full flex items-center justify-center shadow">
                     {totalCartCount}
                   </span>
                 )}
@@ -197,7 +197,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 onClick={() => onSelectCategory(cat)}
                 className={`px-3.5 py-1.5 rounded-lg whitespace-nowrap transition-all ${
                   isActive
-                    ? 'bg-emerald-500/15 text-emerald-400 font-semibold border border-emerald-500/30'
+                    ? 'bg-orange-500/15 text-orange-400 font-semibold border border-orange-500/30'
                     : 'text-stone-400 hover:text-stone-100 hover:bg-stone-800/60'
                 }`}
               >
@@ -218,7 +218,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               type="text"
               value={searchQuery}
               onChange={(e) => onSearchChange(e.target.value)}
-              placeholder="Search eco items..."
+              placeholder="Search items..."
               className="w-full bg-stone-800 text-stone-100 text-sm pl-10 pr-4 py-2 rounded-xl border border-stone-700"
             />
           </div>
@@ -236,7 +236,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                   }}
                   className={`px-3 py-2 rounded-lg text-xs text-left transition-colors ${
                     activeCategory === cat
-                      ? 'bg-emerald-600 text-white font-medium'
+                      ? 'bg-orange-500 text-stone-950 font-bold'
                       : 'bg-stone-800 text-stone-300 hover:bg-stone-750'
                   }`}
                 >

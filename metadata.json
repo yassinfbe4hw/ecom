@@ -1,6 +1,6 @@
 {
-  "name": "EcoBoutique",
-  "description": "A modern sustainable lifestyle e-commerce store featuring product discovery, rich filters, cart & checkout, reviews, wishlist, and Gemini AI shopping recommendations.",
+  "name": "SHOPYVIA",
+  "description": "A modern sustainable lifestyle & smart tech e-commerce store featuring product discovery, rich filters, cart & checkout, reviews, wishlist, and Gemini AI shopping recommendations.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

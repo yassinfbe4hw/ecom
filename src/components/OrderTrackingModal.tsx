@@ -53,11 +53,11 @@ export const OrderTrackingModal: React.FC<OrderTrackingModalProps> = ({
 
         {/* Header */}
         <div className="mb-6">
-          <span className="text-xs font-bold text-emerald-400 uppercase tracking-widest block mb-1">
+          <span className="text-xs font-bold text-orange-400 uppercase tracking-widest block mb-1">
             Real-Time Logistics
           </span>
           <h2 className="text-2xl font-bold text-stone-100 flex items-center gap-2">
-            <Package className="w-6 h-6 text-emerald-400" />
+            <Package className="w-6 h-6 text-orange-400" />
             Order Tracking & History
           </h2>
         </div>
@@ -94,7 +94,7 @@ export const OrderTrackingModal: React.FC<OrderTrackingModalProps> = ({
                   <span className="text-stone-400">Order ID:</span>{' '}
                   <strong className="text-stone-100 font-mono text-sm">{currentOrder.id}</strong>
                 </div>
-                <div className="bg-emerald-950 text-emerald-300 border border-emerald-800 px-2.5 py-1 rounded-lg font-bold">
+                <div className="bg-orange-950 text-orange-300 border border-orange-800 px-2.5 py-1 rounded-lg font-bold">
                   Tracking: {currentOrder.trackingNumber}
                 </div>
               </div>
@@ -106,7 +106,7 @@ export const OrderTrackingModal: React.FC<OrderTrackingModalProps> = ({
                 </div>
                 <div>
                   <span className="text-stone-400 block text-[11px]">Est. Delivery</span>
-                  <span className="text-emerald-400 font-semibold">{currentOrder.estimatedDelivery}</span>
+                  <span className="text-orange-400 font-semibold">{currentOrder.estimatedDelivery}</span>
                 </div>
                 <div>
                   <span className="text-stone-400 block text-[11px]">Destination</span>
@@ -131,7 +131,7 @@ export const OrderTrackingModal: React.FC<OrderTrackingModalProps> = ({
                       <div
                         className={`absolute -left-[31px] top-0 w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-bold border ${
                           isCompleted
-                            ? 'bg-emerald-500 text-stone-950 border-emerald-400 shadow-md shadow-emerald-950'
+                            ? 'bg-orange-500 text-stone-950 border-orange-400 shadow-md shadow-orange-950'
                             : 'bg-stone-800 text-stone-500 border-stone-700'
                         }`}
                       >
@@ -139,8 +139,8 @@ export const OrderTrackingModal: React.FC<OrderTrackingModalProps> = ({
                       </div>
 
                       <div className="ml-2">
-                        <h5 className={`text-xs font-bold ${isCurrent ? 'text-emerald-400' : isCompleted ? 'text-stone-200' : 'text-stone-500'}`}>
-                          {st.title} {isCurrent && <span className="text-[10px] bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded ml-2 font-normal">Active Status</span>}
+                        <h5 className={`text-xs font-bold ${isCurrent ? 'text-orange-400' : isCompleted ? 'text-stone-200' : 'text-stone-500'}`}>
+                          {st.title} {isCurrent && <span className="text-[10px] bg-orange-500/20 text-orange-300 px-2 py-0.5 rounded ml-2 font-normal">Active Status</span>}
                         </h5>
                         <p className="text-[11px] text-stone-400 mt-0.5">{st.desc}</p>
                       </div>

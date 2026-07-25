@@ -217,7 +217,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-stone-900 text-stone-100 font-sans selection:bg-emerald-500 selection:text-stone-950 flex flex-col">
+    <div className="min-h-screen bg-stone-900 text-stone-100 font-sans selection:bg-orange-500 selection:text-stone-950 flex flex-col">
       
       {/* Header Navigation */}
       <Navbar

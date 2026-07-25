@@ -69,7 +69,7 @@ export const WishlistDrawer: React.FC<WishlistDrawerProps> = ({
 
                       <button
                         onClick={() => onMoveToCart(product)}
-                        className="px-2.5 py-1 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-stone-950 text-xs font-bold flex items-center gap-1 transition-all"
+                        className="px-2.5 py-1 rounded-lg bg-orange-500 hover:bg-orange-400 text-stone-950 text-xs font-bold flex items-center gap-1 transition-all"
                       >
                         <ShoppingBag className="w-3.5 h-3.5" />
                         Move to Cart

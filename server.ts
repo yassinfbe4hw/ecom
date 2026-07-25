@@ -45,7 +45,7 @@ app.post('/api/ai-assistant', async (req, res) => {
     if (!gemini) {
       // Fallback recommendation if API key is not configured yet
       return res.json({
-        recommendation: "Welcome to EcoBoutique! Since the AI key is being initialized, I recommend our popular Bamboo Wireless Charging Pad or Organic Cotton Tote. Both are top-rated sustainable choices!",
+        recommendation: "Welcome to SHOPYVIA! Since the AI key is being initialized, I recommend our popular Y68 Big Screen Smart Bracelet or Bamboo Wireless Charging Pad. Both are top-rated choices!",
         suggestedProductIds: ["p-12", "p-2"]
       });
     }
@@ -54,7 +54,7 @@ app.post('/api/ai-assistant', async (req, res) => {
       ? products.map((p: any) => `- ID: ${p.id} | Name: ${p.name} | Price: $${p.price} | Category: ${p.category} | Eco Rating: ${p.ecoRating}/5 | Highlights: ${p.description}`).join('\n')
       : '';
 
-    const systemInstruction = `You are Lumina, the AI Shopping Concierge for EcoBoutique — an eco-friendly modern lifestyle store.
+    const systemInstruction = `You are Lumina, the AI Shopping Concierge for SHOPYVIA — a modern e-commerce store.
 Your goal is to assist customers in finding the perfect sustainable products, gift recommendations, or lifestyle advice based on our catalog.
 
 Catalog Products:
@@ -114,7 +114,7 @@ async function startServer() {
   }
 
   app.listen(PORT, '0.0.0.0', () => {
-    console.log(`EcoBoutique Server running at http://0.0.0.0:${PORT}`);
+    console.log(`SHOPYVIA Server running at http://0.0.0.0:${PORT}`);
   });
 }
 

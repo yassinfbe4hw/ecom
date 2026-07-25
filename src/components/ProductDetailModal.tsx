@@ -93,7 +93,7 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
                 />
                 
                 {product.badge && (
-                  <span className="absolute top-4 left-4 px-3 py-1 bg-emerald-500 text-stone-950 text-xs font-extrabold uppercase rounded-lg shadow-md">
+                  <span className="absolute top-4 left-4 px-3 py-1 bg-orange-500 text-stone-950 text-xs font-extrabold uppercase rounded-lg shadow-md">
                     {product.badge}
                   </span>
                 )}
@@ -107,7 +107,7 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
                       key={idx}
                       onClick={() => setSelectedImage(img)}
                       className={`w-16 h-16 rounded-xl overflow-hidden border-2 transition-all flex-shrink-0 ${
-                        selectedImage === img ? 'border-emerald-500 scale-105' : 'border-stone-800 opacity-60 hover:opacity-100'
+                        selectedImage === img ? 'border-orange-500 scale-105' : 'border-stone-800 opacity-60 hover:opacity-100'
                       }`}
                     >
                       <img src={img} alt="Thumbnail" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
@@ -121,7 +121,7 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
             <div className="space-y-6 flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between text-xs text-stone-400 mb-2">
-                  <span className="text-emerald-400 font-semibold uppercase tracking-wider">
+                  <span className="text-orange-400 font-semibold uppercase tracking-wider">
                     {product.category}
                   </span>
                   <div className="flex items-center gap-1">
@@ -136,8 +136,8 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
                 </h1>
 
                 {/* Eco Tag Banner */}
-                <div className="mt-3 p-2.5 rounded-xl bg-emerald-950/60 border border-emerald-800/60 flex items-center gap-2 text-xs text-emerald-300 font-medium">
-                  <Leaf className="w-4 h-4 text-emerald-400 fill-emerald-400 flex-shrink-0" />
+                <div className="mt-3 p-2.5 rounded-xl bg-orange-950/60 border border-orange-800/60 flex items-center gap-2 text-xs text-orange-300 font-medium">
+                  <Leaf className="w-4 h-4 text-orange-400 fill-orange-400 flex-shrink-0" />
                   <span><strong>Eco Score {product.ecoRating}/5:</strong> {product.sustainabilityTag}</span>
                 </div>
 
@@ -166,7 +166,7 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
                 {product.variants?.colors && product.variants.colors.length > 0 && (
                   <div className="mt-6 space-y-2">
                     <label className="text-xs font-semibold text-stone-300 block">
-                      Color: <span className="text-emerald-400 font-bold">{selectedColor}</span>
+                      Color: <span className="text-orange-400 font-bold">{selectedColor}</span>
                     </label>
                     <div className="flex gap-2">
                       {product.variants.colors.map((c) => (
@@ -174,7 +174,7 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
                           key={c.name}
                           onClick={() => setSelectedColor(c.name)}
                           className={`w-8 h-8 rounded-full border-2 transition-all relative flex items-center justify-center ${
-                            selectedColor === c.name ? 'border-emerald-400 scale-110 shadow' : 'border-stone-700 opacity-80'
+                            selectedColor === c.name ? 'border-orange-400 scale-110 shadow' : 'border-stone-700 opacity-80'
                           }`}
                           style={{ backgroundColor: c.hex }}
                           title={c.name}
@@ -192,7 +192,7 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
                 {product.variants?.sizes && product.variants.sizes.length > 0 && (
                   <div className="mt-4 space-y-2">
                     <label className="text-xs font-semibold text-stone-300 block">
-                      Size: <span className="text-emerald-400 font-bold">{selectedSize}</span>
+                      Size: <span className="text-orange-400 font-bold">{selectedSize}</span>
                     </label>
                     <div className="flex gap-2">
                       {product.variants.sizes.map((s) => (
@@ -201,7 +201,7 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
                           onClick={() => setSelectedSize(s)}
                           className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
                             selectedSize === s
-                              ? 'bg-emerald-500 text-stone-950 shadow'
+                              ? 'bg-orange-500 text-stone-950 shadow'
                               : 'bg-stone-800 text-stone-300 hover:bg-stone-750'
                           }`}
                         >
@@ -259,16 +259,16 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
 
                   <button
                     onClick={() => onAddToCartWithDetails(product, quantity, selectedColor, selectedSize, true)}
-                    className="py-3.5 px-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-stone-950 font-bold text-xs sm:text-sm transition-all shadow-lg shadow-emerald-900/40 flex items-center justify-center gap-2"
+                    className="py-3.5 px-4 rounded-xl bg-orange-500 hover:bg-orange-400 text-stone-950 font-bold text-xs sm:text-sm transition-all shadow-lg shadow-orange-950/40 flex items-center justify-center gap-2"
                   >
                     Buy Now
                   </button>
                 </div>
 
                 <div className="flex items-center justify-between text-[11px] text-stone-400 pt-2 px-1">
-                  <span className="flex items-center gap-1"><Truck className="w-3.5 h-3.5 text-emerald-400" /> Free Shipping $50+</span>
-                  <span className="flex items-center gap-1"><ShieldCheck className="w-3.5 h-3.5 text-emerald-400" /> 30-Day Guarantee</span>
-                  <span className="flex items-center gap-1"><RefreshCcw className="w-3.5 h-3.5 text-emerald-400" /> Plastic Free</span>
+                  <span className="flex items-center gap-1"><Truck className="w-3.5 h-3.5 text-orange-400" /> Free Shipping $50+</span>
+                  <span className="flex items-center gap-1"><ShieldCheck className="w-3.5 h-3.5 text-orange-400" /> 30-Day Guarantee</span>
+                  <span className="flex items-center gap-1"><RefreshCcw className="w-3.5 h-3.5 text-orange-400" /> Plastic Free</span>
                 </div>
               </div>
 
@@ -282,7 +282,7 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
               <button
                 onClick={() => setActiveTab('details')}
                 className={`pb-3 transition-all ${
-                  activeTab === 'details' ? 'text-emerald-400 border-b-2 border-emerald-400' : 'text-stone-400 hover:text-stone-200'
+                  activeTab === 'details' ? 'text-orange-400 border-b-2 border-orange-400' : 'text-stone-400 hover:text-stone-200'
                 }`}
               >
                 Key Features
@@ -290,7 +290,7 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
               <button
                 onClick={() => setActiveTab('specs')}
                 className={`pb-3 transition-all ${
-                  activeTab === 'specs' ? 'text-emerald-400 border-b-2 border-emerald-400' : 'text-stone-400 hover:text-stone-200'
+                  activeTab === 'specs' ? 'text-orange-400 border-b-2 border-orange-400' : 'text-stone-400 hover:text-stone-200'
                 }`}
               >
                 Specifications
@@ -298,7 +298,7 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
               <button
                 onClick={() => setActiveTab('reviews')}
                 className={`pb-3 transition-all ${
-                  activeTab === 'reviews' ? 'text-emerald-400 border-b-2 border-emerald-400' : 'text-stone-400 hover:text-stone-200'
+                  activeTab === 'reviews' ? 'text-orange-400 border-b-2 border-orange-400' : 'text-stone-400 hover:text-stone-200'
                 }`}
               >
                 Reviews ({reviews.length})
@@ -310,7 +310,7 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-stone-300">
                 {product.features.map((feat, idx) => (
                   <div key={idx} className="p-3 bg-stone-850 rounded-xl border border-stone-800 flex items-start gap-2.5">
-                    <Check className="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" />
+                    <Check className="w-4 h-4 text-orange-400 mt-0.5 flex-shrink-0" />
                     <span>{feat}</span>
                   </div>
                 ))}
@@ -337,7 +337,7 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
                   <h4 className="text-xs font-bold text-stone-200 uppercase tracking-wider">Leave a Customer Review</h4>
                   
                   {reviewSubmitted ? (
-                    <div className="p-3 bg-emerald-950 text-emerald-300 border border-emerald-800 rounded-lg text-xs font-semibold">
+                    <div className="p-3 bg-orange-950 text-orange-300 border border-orange-800 rounded-lg text-xs font-semibold">
                       ✓ Thank you! Your review has been submitted.
                     </div>
                   ) : (
@@ -349,7 +349,7 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
                           placeholder="Your Name"
                           value={newReviewName}
                           onChange={(e) => setNewReviewName(e.target.value)}
-                          className="bg-stone-800 text-stone-100 text-xs px-3 py-2 rounded-lg border border-stone-700 focus:outline-none focus:border-emerald-500"
+                          className="bg-stone-800 text-stone-100 text-xs px-3 py-2 rounded-lg border border-stone-700 focus:outline-none focus:border-orange-500"
                         />
 
                         <div className="flex items-center gap-2 bg-stone-800 px-3 py-1.5 rounded-lg border border-stone-700">
@@ -375,15 +375,15 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
                       <textarea
                         required
                         rows={2}
-                        placeholder="Write your honest feedback on product quality, packaging, and eco features..."
+                        placeholder="Write your honest feedback on product quality, packaging, and features..."
                         value={newReviewComment}
                         onChange={(e) => setNewReviewComment(e.target.value)}
-                        className="w-full bg-stone-800 text-stone-100 text-xs p-3 rounded-lg border border-stone-700 focus:outline-none focus:border-emerald-500"
+                        className="w-full bg-stone-800 text-stone-100 text-xs p-3 rounded-lg border border-stone-700 focus:outline-none focus:border-orange-500"
                       />
 
                       <button
                         type="submit"
-                        className="px-4 py-2 bg-emerald-500 hover:bg-emerald-400 text-stone-950 font-bold text-xs rounded-lg transition-all flex items-center gap-1.5"
+                        className="px-4 py-2 bg-orange-500 hover:bg-orange-400 text-stone-950 font-bold text-xs rounded-lg transition-all flex items-center gap-1.5"
                       >
                         <Send className="w-3.5 h-3.5" />
                         Submit Review
@@ -401,7 +401,7 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
                           <div className="flex items-center gap-2">
                             <span className="font-bold text-stone-100">{rev.userName}</span>
                             {rev.verified && (
-                              <span className="text-[10px] bg-emerald-950 text-emerald-400 border border-emerald-800 px-1.5 py-0.5 rounded font-medium">
+                              <span className="text-[10px] bg-orange-950 text-orange-400 border border-orange-800 px-1.5 py-0.5 rounded font-medium">
                                 Verified Purchase
                               </span>
                             )}

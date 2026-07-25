@@ -92,7 +92,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
 
         {/* Step Header */}
         <div className="mb-6">
-          <span className="text-xs font-bold text-emerald-400 uppercase tracking-widest block mb-1">
+          <span className="text-xs font-bold text-orange-400 uppercase tracking-widest block mb-1">
             {step === 3 ? 'Order Confirmed' : `Step ${step} of 2 — Secure Checkout`}
           </span>
           <h2 className="text-2xl font-bold text-stone-100">
@@ -113,7 +113,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
                   required
                   value={address.fullName}
                   onChange={(e) => setAddress({ ...address, fullName: e.target.value })}
-                  className="w-full bg-stone-800 text-stone-100 text-xs px-3.5 py-2.5 rounded-xl border border-stone-700 focus:outline-none focus:border-emerald-500"
+                  className="w-full bg-stone-800 text-stone-100 text-xs px-3.5 py-2.5 rounded-xl border border-stone-700 focus:outline-none focus:border-orange-500"
                 />
               </div>
 
@@ -124,7 +124,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
                   required
                   value={address.email}
                   onChange={(e) => setAddress({ ...address, email: e.target.value })}
-                  className="w-full bg-stone-800 text-stone-100 text-xs px-3.5 py-2.5 rounded-xl border border-stone-700 focus:outline-none focus:border-emerald-500"
+                  className="w-full bg-stone-800 text-stone-100 text-xs px-3.5 py-2.5 rounded-xl border border-stone-700 focus:outline-none focus:border-orange-500"
                 />
               </div>
             </div>
@@ -136,7 +136,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
                 required
                 value={address.address}
                 onChange={(e) => setAddress({ ...address, address: e.target.value })}
-                className="w-full bg-stone-800 text-stone-100 text-xs px-3.5 py-2.5 rounded-xl border border-stone-700 focus:outline-none focus:border-emerald-500"
+                className="w-full bg-stone-800 text-stone-100 text-xs px-3.5 py-2.5 rounded-xl border border-stone-700 focus:outline-none focus:border-orange-500"
               />
             </div>
 
@@ -148,7 +148,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
                   required
                   value={address.city}
                   onChange={(e) => setAddress({ ...address, city: e.target.value })}
-                  className="w-full bg-stone-800 text-stone-100 text-xs px-3 py-2.5 rounded-xl border border-stone-700 focus:outline-none focus:border-emerald-500"
+                  className="w-full bg-stone-800 text-stone-100 text-xs px-3 py-2.5 rounded-xl border border-stone-700 focus:outline-none focus:border-orange-500"
                 />
               </div>
 
@@ -159,7 +159,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
                   required
                   value={address.postalCode}
                   onChange={(e) => setAddress({ ...address, postalCode: e.target.value })}
-                  className="w-full bg-stone-800 text-stone-100 text-xs px-3 py-2.5 rounded-xl border border-stone-700 focus:outline-none focus:border-emerald-500"
+                  className="w-full bg-stone-800 text-stone-100 text-xs px-3 py-2.5 rounded-xl border border-stone-700 focus:outline-none focus:border-orange-500"
                 />
               </div>
 
@@ -170,16 +170,16 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
                   required
                   value={address.country}
                   onChange={(e) => setAddress({ ...address, country: e.target.value })}
-                  className="w-full bg-stone-800 text-stone-100 text-xs px-3 py-2.5 rounded-xl border border-stone-700 focus:outline-none focus:border-emerald-500"
+                  className="w-full bg-stone-800 text-stone-100 text-xs px-3 py-2.5 rounded-xl border border-stone-700 focus:outline-none focus:border-orange-500"
                 />
               </div>
             </div>
 
             <div className="pt-4 flex justify-between items-center border-t border-stone-800">
-              <span className="text-xs text-stone-400">Total: <strong className="text-emerald-400 text-sm">${total.toFixed(2)}</strong></span>
+              <span className="text-xs text-stone-400">Total: <strong className="text-orange-400 text-sm">${total.toFixed(2)}</strong></span>
               <button
                 type="submit"
-                className="px-6 py-3 bg-emerald-500 hover:bg-emerald-400 text-stone-950 font-bold text-xs rounded-xl shadow-md transition-all flex items-center gap-2"
+                className="px-6 py-3 bg-orange-500 hover:bg-orange-400 text-stone-950 font-bold text-xs rounded-xl shadow-md transition-all flex items-center gap-2"
               >
                 Continue to Payment
                 <ArrowRight className="w-4 h-4" />
@@ -199,7 +199,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
                   type="button"
                   onClick={() => setPaymentMethod('card')}
                   className={`p-3 rounded-xl border text-xs font-bold flex flex-col items-center gap-1 transition-all ${
-                    paymentMethod === 'card' ? 'bg-emerald-500/20 text-emerald-300 border-emerald-500' : 'bg-stone-800 text-stone-400 border-stone-700'
+                    paymentMethod === 'card' ? 'bg-orange-500/20 text-orange-300 border-orange-500' : 'bg-stone-800 text-stone-400 border-stone-700'
                   }`}
                 >
                   <CreditCard className="w-5 h-5" />
@@ -210,7 +210,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
                   type="button"
                   onClick={() => setPaymentMethod('applepay')}
                   className={`p-3 rounded-xl border text-xs font-bold flex flex-col items-center gap-1 transition-all ${
-                    paymentMethod === 'applepay' ? 'bg-emerald-500/20 text-emerald-300 border-emerald-500' : 'bg-stone-800 text-stone-400 border-stone-700'
+                    paymentMethod === 'applepay' ? 'bg-orange-500/20 text-orange-300 border-orange-500' : 'bg-stone-800 text-stone-400 border-stone-700'
                   }`}
                 >
                   <Sparkles className="w-5 h-5 text-amber-300" />
@@ -221,10 +221,10 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
                   type="button"
                   onClick={() => setPaymentMethod('paypal')}
                   className={`p-3 rounded-xl border text-xs font-bold flex flex-col items-center gap-1 transition-all ${
-                    paymentMethod === 'paypal' ? 'bg-emerald-500/20 text-emerald-300 border-emerald-500' : 'bg-stone-800 text-stone-400 border-stone-700'
+                    paymentMethod === 'paypal' ? 'bg-orange-500/20 text-orange-300 border-orange-500' : 'bg-stone-800 text-stone-400 border-stone-700'
                   }`}
                 >
-                  <ShieldCheck className="w-5 h-5 text-teal-300" />
+                  <ShieldCheck className="w-5 h-5 text-amber-400" />
                   PayPal
                 </button>
               </div>
@@ -255,16 +255,16 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
             )}
 
             {/* Tree Planting Offset Option */}
-            <label className="p-3 bg-emerald-950/60 rounded-xl border border-emerald-800 flex items-center gap-3 cursor-pointer">
+            <label className="p-3 bg-orange-950/60 rounded-xl border border-orange-800 flex items-center gap-3 cursor-pointer">
               <input
                 type="checkbox"
                 checked={carbonOffset}
                 onChange={(e) => setCarbonOffset(e.target.checked)}
-                className="w-4 h-4 accent-emerald-500 bg-stone-800 rounded"
+                className="w-4 h-4 accent-orange-500 bg-stone-800 rounded"
               />
               <div className="text-xs">
-                <span className="font-bold text-emerald-300 flex items-center gap-1">
-                  <TreePine className="w-4 h-4 text-emerald-400" />
+                <span className="font-bold text-orange-300 flex items-center gap-1">
+                  <TreePine className="w-4 h-4 text-orange-400" />
                   Plant 2 Trees & Offset Package Footprint (+$1.50)
                 </span>
                 <span className="text-stone-400 block text-[11px]">Directly funds Eden Reforestation Projects.</span>
@@ -283,7 +283,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="px-6 py-3 bg-emerald-500 hover:bg-emerald-400 text-stone-950 font-extrabold text-xs rounded-xl shadow-lg transition-all flex items-center gap-2 disabled:opacity-50"
+                className="px-6 py-3 bg-orange-500 hover:bg-orange-400 text-stone-950 font-extrabold text-xs rounded-xl shadow-lg transition-all flex items-center gap-2 disabled:opacity-50"
               >
                 {isSubmitting ? (
                   <span>Processing Secure Order...</span>
@@ -301,12 +301,12 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
         {/* STEP 3: Order Confirmation */}
         {step === 3 && (
           <div className="text-center space-y-6 py-4">
-            <div className="w-16 h-16 bg-emerald-500/20 text-emerald-400 rounded-full flex items-center justify-center mx-auto border border-emerald-500/40">
+            <div className="w-16 h-16 bg-orange-500/20 text-orange-400 rounded-full flex items-center justify-center mx-auto border border-orange-500/40">
               <Check className="w-8 h-8" />
             </div>
 
             <div>
-              <p className="text-sm font-semibold text-emerald-300">Your sustainable order has been placed!</p>
+              <p className="text-sm font-semibold text-orange-300">Your sustainable order has been placed!</p>
               <p className="text-xs text-stone-400 mt-1">
                 We sent a receipt and real-time tracking link to <strong>{address.email}</strong>.
               </p>
@@ -319,11 +319,11 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
               </div>
               <div className="flex justify-between text-stone-300">
                 <span>Total Paid:</span>
-                <strong className="text-emerald-400">${total.toFixed(2)}</strong>
+                <strong className="text-orange-400">${total.toFixed(2)}</strong>
               </div>
               <div className="flex justify-between text-stone-300">
                 <span>Status:</span>
-                <strong className="text-emerald-300 flex items-center gap-1">
+                <strong className="text-orange-300 flex items-center gap-1">
                   <Package className="w-3.5 h-3.5" /> Preparing Carbon-Neutral Package
                 </strong>
               </div>
@@ -331,7 +331,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
 
             <button
               onClick={onClose}
-              className="w-full py-3 bg-emerald-500 hover:bg-emerald-400 text-stone-950 font-bold text-xs rounded-xl transition-all"
+              className="w-full py-3 bg-orange-500 hover:bg-orange-400 text-stone-950 font-bold text-xs rounded-xl transition-all"
             >
               Continue Shopping
             </button>

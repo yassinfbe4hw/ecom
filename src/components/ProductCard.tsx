@@ -26,7 +26,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
   return (
     <div 
       onClick={() => onSelectProduct(product)}
-      className="group relative bg-stone-850 rounded-2xl overflow-hidden border border-stone-800 hover:border-emerald-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-emerald-950/20 flex flex-col cursor-pointer"
+      className="group relative bg-stone-850 rounded-2xl overflow-hidden border border-stone-800 hover:border-orange-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-orange-950/20 flex flex-col cursor-pointer"
     >
       {/* Image Container */}
       <div className="relative aspect-square overflow-hidden bg-stone-900">
@@ -43,11 +43,11 @@ export const ProductCard: React.FC<ProductCardProps> = ({
             <span className={`px-2.5 py-1 rounded-lg text-[11px] font-extrabold uppercase tracking-wide shadow-md ${
               product.badge === 'Best Seller'
                 ? 'bg-amber-500 text-stone-950'
-                : product.badge === 'Eco Hero'
-                ? 'bg-emerald-500 text-stone-950'
+                : product.badge === 'Eco Hero' || product.badge === 'New Arrival'
+                ? 'bg-orange-500 text-stone-950'
                 : product.badge === 'Sale'
                 ? 'bg-rose-500 text-white'
-                : 'bg-teal-600 text-white'
+                : 'bg-amber-600 text-white'
             }`}>
               {product.badge}
             </span>
@@ -74,8 +74,8 @@ export const ProductCard: React.FC<ProductCardProps> = ({
         </button>
 
         {/* Eco Leaf Score Indicator */}
-        <div className="absolute bottom-3 left-3 bg-stone-900/80 backdrop-blur-md px-2.5 py-1 rounded-lg border border-stone-700/60 flex items-center gap-1 text-[11px] text-emerald-300 font-semibold">
-          <Leaf className="w-3.5 h-3.5 fill-emerald-400 text-emerald-400" />
+        <div className="absolute bottom-3 left-3 bg-stone-900/80 backdrop-blur-md px-2.5 py-1 rounded-lg border border-stone-700/60 flex items-center gap-1 text-[11px] text-orange-300 font-semibold">
+          <Leaf className="w-3.5 h-3.5 fill-orange-400 text-orange-400" />
           <span>Eco {product.ecoRating}/5</span>
         </div>
       </div>
@@ -84,7 +84,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
       <div className="p-4 flex-1 flex flex-col justify-between space-y-3">
         <div>
           <div className="flex items-center justify-between text-xs text-stone-400 mb-1">
-            <span className="font-medium text-emerald-400/90 uppercase tracking-wider text-[10px]">
+            <span className="font-medium text-orange-400/90 uppercase tracking-wider text-[10px]">
               {product.category}
             </span>
             <div className="flex items-center gap-1">
@@ -94,7 +94,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
             </div>
           </div>
 
-          <h3 className="font-semibold text-stone-100 text-sm line-clamp-2 group-hover:text-emerald-300 transition-colors">
+          <h3 className="font-semibold text-stone-100 text-sm line-clamp-2 group-hover:text-orange-300 transition-colors">
             {product.name}
           </h3>
 
@@ -122,8 +122,8 @@ export const ProductCard: React.FC<ProductCardProps> = ({
             onClick={(e) => onAddToCart(product, e)}
             className={`px-3 py-1.5 rounded-xl text-xs font-bold flex items-center gap-1.5 transition-all ${
               cartQuantity > 0
-                ? 'bg-emerald-600 text-white shadow-md shadow-emerald-950/40'
-                : 'bg-stone-800 hover:bg-emerald-500 hover:text-stone-950 text-stone-200 border border-stone-700'
+                ? 'bg-orange-500 text-stone-950 shadow-md shadow-orange-950/40'
+                : 'bg-stone-800 hover:bg-orange-500 hover:text-stone-950 text-stone-200 border border-stone-700'
             }`}
           >
             {cartQuantity > 0 ? (

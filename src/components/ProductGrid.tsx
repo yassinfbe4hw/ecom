@@ -41,21 +41,21 @@ export const ProductGrid: React.FC<ProductGridProps> = ({
       {/* Section Header */}
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
         <div>
-          <span className="text-xs font-bold uppercase tracking-widest text-emerald-400 block mb-1">
-            Ethical Catalog
+          <span className="text-xs font-bold uppercase tracking-widest text-orange-400 block mb-1">
+            Ethical & Smart Catalog
           </span>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-stone-100">
-            {filterState.category === 'All' ? 'All Sustainable Products' : filterState.category}
+            {filterState.category === 'All' ? 'All Featured Products' : filterState.category}
           </h2>
           <p className="text-stone-400 text-xs sm:text-sm mt-1">
-            Discover {products.length} thoughtfully crafted items designed for zero-waste lifestyle.
+            Discover {products.length} thoughtfully crafted items designed for smart, zero-waste living.
           </p>
         </div>
 
         {/* Sort Controls */}
         <div className="flex items-center gap-3">
           <div className="flex items-center gap-2 bg-stone-850 px-3 py-2 rounded-xl border border-stone-800 text-xs text-stone-300">
-            <ArrowUpDown className="w-3.5 h-3.5 text-emerald-400" />
+            <ArrowUpDown className="w-3.5 h-3.5 text-orange-400" />
             <span className="font-medium text-stone-400">Sort by:</span>
             <select
               value={filterState.sortBy}
@@ -83,7 +83,7 @@ export const ProductGrid: React.FC<ProductGridProps> = ({
                 onClick={() => onFilterChange({ category: cat })}
                 className={`px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition-all ${
                   isSelected
-                    ? 'bg-emerald-500 text-stone-950 font-bold shadow-md shadow-emerald-950/50'
+                    ? 'bg-orange-500 text-stone-950 font-extrabold shadow-md shadow-orange-950/50'
                     : 'bg-stone-800 text-stone-300 hover:bg-stone-750 hover:text-stone-100 border border-stone-700/60'
                 }`}
               >
@@ -99,7 +99,7 @@ export const ProductGrid: React.FC<ProductGridProps> = ({
           <div className="space-y-1">
             <div className="flex justify-between text-stone-300">
               <span className="font-semibold text-stone-400">Max Price</span>
-              <span className="font-bold text-emerald-400">${filterState.maxPrice}</span>
+              <span className="font-bold text-orange-400">${filterState.maxPrice}</span>
             </div>
             <input
               type="range"
@@ -108,7 +108,7 @@ export const ProductGrid: React.FC<ProductGridProps> = ({
               step="5"
               value={filterState.maxPrice}
               onChange={(e) => onFilterChange({ maxPrice: Number(e.target.value) })}
-              className="w-full accent-emerald-500 bg-stone-750 rounded-lg cursor-pointer h-1.5"
+              className="w-full accent-orange-500 bg-stone-750 rounded-lg cursor-pointer h-1.5"
             />
           </div>
 
@@ -136,7 +136,7 @@ export const ProductGrid: React.FC<ProductGridProps> = ({
                 type="checkbox"
                 checked={filterState.ecoOnly}
                 onChange={(e) => onFilterChange({ ecoOnly: e.target.checked })}
-                className="w-4 h-4 rounded accent-emerald-500 bg-stone-800 border-stone-700 cursor-pointer"
+                className="w-4 h-4 rounded accent-orange-500 bg-stone-800 border-stone-700 cursor-pointer"
               />
               <span>5/5 Eco Score Only</span>
             </label>
@@ -161,7 +161,7 @@ export const ProductGrid: React.FC<ProductGridProps> = ({
           <div className="flex flex-wrap items-center gap-2 pt-2 border-t border-stone-800/60 text-[11px]">
             <span className="text-stone-400 font-medium">Active:</span>
             {filterState.category !== 'All' && (
-              <span className="bg-emerald-950 text-emerald-300 border border-emerald-800 px-2 py-0.5 rounded-md flex items-center gap-1">
+              <span className="bg-orange-950 text-orange-300 border border-orange-800 px-2 py-0.5 rounded-md flex items-center gap-1">
                 Category: {filterState.category}
                 <button onClick={() => onFilterChange({ category: 'All' })}>
                   <X className="w-3 h-3 hover:text-white" />
@@ -169,7 +169,7 @@ export const ProductGrid: React.FC<ProductGridProps> = ({
               </span>
             )}
             {filterState.searchQuery && (
-              <span className="bg-emerald-950 text-emerald-300 border border-emerald-800 px-2 py-0.5 rounded-md flex items-center gap-1">
+              <span className="bg-orange-950 text-orange-300 border border-orange-800 px-2 py-0.5 rounded-md flex items-center gap-1">
                 "{filterState.searchQuery}"
                 <button onClick={() => onFilterChange({ searchQuery: '' })}>
                   <X className="w-3 h-3 hover:text-white" />
@@ -177,7 +177,7 @@ export const ProductGrid: React.FC<ProductGridProps> = ({
               </span>
             )}
             {filterState.maxPrice < 250 && (
-              <span className="bg-emerald-950 text-emerald-300 border border-emerald-800 px-2 py-0.5 rounded-md flex items-center gap-1">
+              <span className="bg-orange-950 text-orange-300 border border-orange-800 px-2 py-0.5 rounded-md flex items-center gap-1">
                 Under ${filterState.maxPrice}
                 <button onClick={() => onFilterChange({ maxPrice: 250 })}>
                   <X className="w-3 h-3 hover:text-white" />
@@ -185,7 +185,7 @@ export const ProductGrid: React.FC<ProductGridProps> = ({
               </span>
             )}
             {filterState.ecoOnly && (
-              <span className="bg-emerald-950 text-emerald-300 border border-emerald-800 px-2 py-0.5 rounded-md flex items-center gap-1">
+              <span className="bg-orange-950 text-orange-300 border border-orange-800 px-2 py-0.5 rounded-md flex items-center gap-1">
                 Eco Rating 5
                 <button onClick={() => onFilterChange({ ecoOnly: false })}>
                   <X className="w-3 h-3 hover:text-white" />
@@ -214,13 +214,13 @@ export const ProductGrid: React.FC<ProductGridProps> = ({
       ) : (
         <div className="py-16 text-center bg-stone-850 rounded-2xl border border-stone-800 max-w-lg mx-auto">
           <Filter className="w-12 h-12 text-stone-500 mx-auto mb-3" />
-          <h3 className="text-lg font-bold text-stone-200">No matching eco products found</h3>
+          <h3 className="text-lg font-bold text-stone-200">No matching products found</h3>
           <p className="text-stone-400 text-xs mt-1 mb-4 px-6">
             Try adjusting your search terms, price limits, or clearing active filters to view our full collection.
           </p>
           <button
             onClick={onResetFilters}
-            className="px-4 py-2 bg-emerald-500 hover:bg-emerald-400 text-stone-950 font-bold text-xs rounded-xl transition-all shadow-md"
+            className="px-4 py-2 bg-orange-500 hover:bg-orange-400 text-stone-950 font-extrabold text-xs rounded-xl transition-all shadow-md"
           >
             Clear All Filters
           </button>
